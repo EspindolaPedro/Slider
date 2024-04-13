@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+}
+
+header {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /*tira o height*/
+}
+.header {
+    height: 50px;
+    background-color: Blue;
+}
+.slider { /*display para as imagens ficar uma ao lado da outra*/
+    flex:1; /*tirar o flex 1 para definir tamanho*/
+    overflow: hidden;
+    /*
+    width:500px; depende do tamnho que queira
+    height:400px; 
+    */
+
+}
+
+.slider-width { /*largura vai pegar 100% da tela*/
+    height: 100%;
+    width: calc(100vw * 3);
+    margin-left: 0vw;
+    display: flex;
+    transition: all ease 0.4s;
+}
+.slider-item { /*as imagens tera 100% do espaço disponível*/
+    width:300vw;
+    height: inherit;
+    background-position: center;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0px 1px 1px #333;
+    font-size: 50px;
+}
+
+.slider-controls {
+    position: absolute;
+    z-index:99;
+    width: 100%; /*remova a largura*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.slider-control {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+}
